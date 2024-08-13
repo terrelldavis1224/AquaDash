@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaDash</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="headercontainer">
+
+   <img class="title" style="height:5rem; width: 20rem;" src="/static/img/AQUADASH2.png"></img>
+
+   <a href="https://terrelldavis1224.github.io/" target="_blank">
+    <img src="/static/img/MyWebsite.png" alt="My Website" style="height:3rem; width:10rem;">
+    </a>
+    </div>
+        <table>
+        <tbody id ="pool">
+           
+        
+        </tbody>
+        </table>
+
+    <div class="container">
+
+        <img src="/static/img/startrace.png" style="height:4rem; width: 16rem;" id="startRace" onclick="startRace()"></img>
+
+        <img src="/static/img/reset.png" style="height:3rem; width: 10rem;" id="createRacer" onclick="resetElements()"></img>
+    </div>
+
+    <div class="container">
+
+        <select name="default" id="default">
+            <option value="Sarah">Sarah Sjöström Womens 100m 2024 Winner</option>
+            <option value="Zhanle">Zhanle Pan Mens 100m world rec</option>
+            <option value="Caeleb">Caeleb Dressel Mens 100m </option>
+            <option value="Emma">Emma Mckeon Womens 100m world rec </option>
+            <option value="stone">Stone ("if you wait long enough it might move")</option>
+            <option value="Yellowfin">Yellowfin</option>
+            <option value="SwordFish">SwordFish</option>
+            <option value="turtle">turtle</option>
+            <option value="snake">Sidewinder Snake</option>
+            <option value="lizard">Basilisk lizards (running on water)</option>
+
+        </select>
+
+        <img src="/static/img/add.png"  onclick="createRacer(document.getElementById('default').value)"></img>
+
+    </div>
+   
+</body>
+
+<script>
+    var imageUrls = {
+        "Zhenle": "{{ url_for('static', filename='img/man.png') }}",
+        "Caeleb":"{{ url_for('static', filename='img/man.png') }}",
+        "Sarah": "{{ url_for('static', filename='img/woman.png') }}",
+        "Emma": "{{ url_for('static', filename='img/woman.png') }}",
+        "Yellowfin": "{{ url_for('static', filename='img/Yellowfin.png') }}",
+        "SwordFish": "{{ url_for('static', filename='img/SwordFish.png') }}",
+        "stone": "{{ url_for('static', filename='img/stone.png') }}",      
+        "turtle": "{{ url_for('static', filename='img/turtle.png') }}",
+        "snake": "{{ url_for('static',filename = 'img/snake.png')}}",
+        "lizard": "{{ url_for('static',filename = 'img/lizard.png')}}"
+
+    };
+</script>
+
+<script src="{{ url_for('static', filename='js/Race.js') }}"></script>
+
+</html>

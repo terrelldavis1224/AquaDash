@@ -1,0 +1,143 @@
+
+/*https://www.youtube.com/watch?v=O0Au0Xc-qL8 to create water effect*/
+body{
+background-image: url('/static/img/floor4.png');
+background-size: cover;
+image-rendering: high-quality; 
+height: 100px; /* Adjust based on your design */
+width: 100%;
+}
+
+/* title borders above and below also super auto pets title */
+h1 {
+    text-align: center;
+    color: #0074D9;
+    font-family: 'Baloo 2', cursive;
+    font-size: 48px;
+    text-shadow: 1px 1px 2px #000, 2px 2px 2px #000, 3px 3px 2px #000, 4px 4px 17px #fff, 5px 5px 12px #f7f4f4;
+
+}
+img{
+    width: 40px;
+    height: 40px;
+}
+
+.man{
+    animation: shake 1s ease-in-out infinite;
+
+}
+.woman{
+    animation: shake .2s ease-in-out infinite;
+}
+
+.title{
+  animation: shake2 2s  linear infinite;
+
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(20deg);
+      }
+      25%, 75% {
+        transform: rotate(-20px);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+}
+
+@keyframes shake2 {
+  0%, 100% {
+      transform: rotate(-10deg);
+    }
+    25%{
+      transform: rotate(-10px);
+
+    }
+    75% {
+      transform: rotate(10px);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+}
+
+
+@keyframes wiggle {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-3px);
+    }
+    50% {
+      transform: translateX(3px);
+    }
+  }
+
+.container {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    gap: 20px;    
+    
+}
+.headercontainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%; 
+}
+
+.headercontainer::before,
+.headercontainer::after {
+  content: "";
+  flex: 1; 
+}
+
+.headercontainer::after {
+  margin-right: 2vw; 
+}
+
+.headercontainer > *:not(:first-child) {
+  margin-left: 2vw; 
+}
+
+
+button{
+text-decoration: none;
+border-radius: 10px  ;
+background-color: #fff;
+padding: 15px 10px;
+border: none;
+box-shadow: 1px 1px 3px 2px black, 0px 0px 25px 3px white;
+
+}
+
+
+td {
+    width: 50px;
+    height: 50px;
+    transition: 47s linear;
+  }
+
+
+
+table {
+    border-collapse:collapse;
+    width: 100%;
+    margin-bottom: 2%;
+    background-color: aqua;
+}
+
+td {
+    border-bottom: 1px solid #000; 
+    padding: 20px 
+}
+
+tr:first-child td {
+    border-top: 1px solid #000;
+}
+
+
