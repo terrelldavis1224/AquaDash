@@ -1,10 +1,11 @@
 import flask
+from flask import Flask, render_template, request, session
 
 
 # Create the application.
-APP = flask.Flask(__name__)
+app = Flask(__name__)
 
-@APP.route('/')
+@app.route('/')
 def index():
     return flask.render_template('index.html')
 
@@ -12,4 +13,4 @@ def index():
 
 
 if __name__ == "__main__":
-    APP.run(debug=True)
+    app.run(debug=True)
