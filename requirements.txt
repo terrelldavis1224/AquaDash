@@ -1,0 +1,7 @@
+pandas
+numpy
+python-dotenv
+flask
+Flask-Limiter
+gunicorn
+datetime
