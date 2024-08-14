@@ -4,7 +4,7 @@ var racers = {
   "snake": 12.42, "stone": 99999,
   "Yellowfin": 4.74,"lizard":14.91,
   "SwordFish": 3.73, "turtle": 117.73378168101601,
-  "Sarah": 52.16, "Zhenle":46.40
+  "Sarah": 52.16, "Zhanle":46.40
 };
 
 
@@ -22,7 +22,7 @@ function startRace() {
     for (let i = 0; i <= size; i++) {
         let element = document.getElementById('pos' + i);
         if (element) {
-            element.style.transform = 'translateX(100%)';
+            element.style.transform = 'translateX(99%)';
         }
     }
 }

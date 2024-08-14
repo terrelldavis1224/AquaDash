@@ -8,13 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="headercontainer">
+    <div class="container">
 
-   <img class="title" style="height:5rem; width: 20rem;" src="/static/img/AQUADASH2.png"></img>
+   <img class="title" style="height:auto; width:35%;" src="/static/img/AQUADASH2.png"></img>
 
-   <a href="https://terrelldavis1224.github.io/" target="_blank">
-    <img src="/static/img/MyWebsite.png" alt="My Website" style="height:3rem; width:10rem;">
-    </a>
     </div>
         <table>
         <tbody id ="pool">
@@ -25,9 +22,9 @@
 
     <div class="container">
 
-        <img src="/static/img/startrace.png" style="height:4rem; width: 16rem;" id="startRace" onclick="startRace()"></img>
+        <img src="/static/img/startrace.png" style="height:auto; width:25%;" id="startRace" onclick="startRace()"></img>
 
-        <img src="/static/img/reset.png" style="height:3rem; width: 10rem;" id="createRacer" onclick="resetElements()"></img>
+        <img src="/static/img/reset.png" style="height:auto; width:15%;" id="createRacer" onclick="resetElements()"></img>
     </div>
 
     <div class="container">
@@ -47,14 +44,24 @@
         </select>
 
         <img src="/static/img/add.png"  onclick="createRacer(document.getElementById('default').value)"></img>
-
     </div>
+
+    <br>
+    <br>
+
+    <div class="c">
+        <a href="https://terrelldavis1224.github.io/" target="_blank">
+            <img src="/static/img/MyWebsite.png" alt="My Website" style="height:auto; width:25%;">
+        </a>
+    </div>
+    
+    
    
 </body>
 
 <script>
     var imageUrls = {
-        "Zhenle": "{{ url_for('static', filename='img/man.png') }}",
+        "Zhanle": "{{ url_for('static', filename='img/man.png') }}",
         "Caeleb":"{{ url_for('static', filename='img/man.png') }}",
         "Sarah": "{{ url_for('static', filename='img/woman.png') }}",
         "Emma": "{{ url_for('static', filename='img/woman.png') }}",

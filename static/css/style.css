@@ -1,5 +1,4 @@
 
-/*https://www.youtube.com/watch?v=O0Au0Xc-qL8 to create water effect*/
 body{
 background-image: url('/static/img/floor4.png');
 background-size: cover;
@@ -76,19 +75,20 @@ img{
     }
   }
 
-.container {
+  .container {
     display: flex;
     justify-content: center;  
     align-items: center; 
-    gap: 20px;    
-    
-}
-.headercontainer {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  width: 100%; 
-}
+    gap: 20px;  
+  }
+
+  .c{
+    width: 100%;
+    display:block;
+    text-align: center;
+  }
+
+
 
 .headercontainer::before,
 .headercontainer::after {
@@ -133,7 +133,7 @@ table {
 
 td {
     border-bottom: 1px solid #000; 
-    padding: 20px 
+    padding: 1rem 
 }
 
 tr:first-child td {
