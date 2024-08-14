@@ -3,10 +3,8 @@ body{
 background-image: url('/static/img/floor4.png');
 background-size: cover;
 image-rendering: high-quality; 
-height: 100px; 
+height: 100%; 
 width: 100%;
-overflow: hidden; 
-
 }
 
 /* title borders above and below also super auto pets title */
