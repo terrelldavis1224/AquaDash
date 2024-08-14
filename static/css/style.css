@@ -3,8 +3,10 @@ body{
 background-image: url('/static/img/floor4.png');
 background-size: cover;
 image-rendering: high-quality; 
-height: 100px; /* Adjust based on your design */
+height: 100px; 
 width: 100%;
+overflow: hidden; 
+
 }
 
 /* title borders above and below also super auto pets title */
@@ -21,7 +23,7 @@ img{
     height: 40px;
 }
 
-.man{
+.Caeleb,Zhanle{
     animation: shake 1s ease-in-out infinite;
 
 }
