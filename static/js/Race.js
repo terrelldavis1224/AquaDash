@@ -4,7 +4,7 @@ var racers = {
   "snake": 12.42, "stone": 99999,
   "Yellowfin": 4.74,"lizard":14.91,
   "SwordFish": 3.73, "turtle": 117.73378168101601,
-  "Sarah": 52.16, "Zhanle":46.40
+  "Sarah Sjöström": 52.16, "Zhanle":46.40
 };
 
 
@@ -18,14 +18,32 @@ window.addEventListener('load', function() {
     });
 });
 
+
+// recalcuate the speed of the img
+// or lock window ajusting until done
 function startRace() {
+    var tableWidth = document.querySelector('table').offsetWidth;
+    var percentageToMove = calculateMovementPercentage(window.innerWidth); // Determine movement percentage based on window size
+
     for (let i = 0; i <= size; i++) {
         let element = document.getElementById('pos' + i);
         if (element) {
-            element.style.transform = 'translateX(99%)';
+            element.style.transform = `translateX(${percentageToMove}%)`;
         }
     }
 }
+
+function calculateMovementPercentage(windowWidth) {
+    if (windowWidth > 1200) { 
+        return 95;
+    } else if (windowWidth > 768) {
+        return 90;
+    } else { 
+        return 85;
+    }
+}
+
+
 
 function resetElements() {
     for (let i = 0; i <= size; i++) {
@@ -36,9 +54,20 @@ function resetElements() {
             element.style.transform = 'translateX(0%)';
             setTimeout(() => {
                 element.style.transition = originalTransition;
-            }, 20); 
+            }, 1); 
         }
     }
+}
+
+function removeElements() {
+    let initialSize = size; 
+    for (let i = 0; i <= initialSize; i++) {
+        let element = document.getElementById('pos' + i);
+        if (element) { 
+            element.remove();
+        }
+    }
+    size = 0; 
 }
 
 function createRacer(x) {
@@ -47,10 +76,13 @@ function createRacer(x) {
     } else {
         size += 1;
         let element = document.getElementById("pool");
+        let nameElement = document.getElementById("heat");
         element.innerHTML += `<tr><td id='pos${size}'><img class ='${x}'  src='${imageUrls[x]}' alt='${x}'></td></tr>`;
-
+        nameElement.innerHTML += `<p id='pos${size}'>${size}. ${x}</p>`;
         let curRacer = document.getElementById(`pos${size}`);
-      curRacer.style.transition = `${racers[x]}s linear`;
-      console.log(String(curRacer.style.animation));
+        curRacer.style.transition = `${racers[x]}s linear`;
+        console.log(String(curRacer.style.animation));
+        resetElements();
+
     }
 }

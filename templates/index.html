@@ -30,7 +30,7 @@
     <div class="container">
 
         <select name="default" id="default">
-            <option value="Sarah">Sarah Sjöström Womens 100m 2024 Winner</option>
+            <option value="Sarah Sjöström">Sarah Sjöström Womens 100m 2024 Winner</option>
             <option value="Zhanle">Zhanle Pan Mens 100m world rec</option>
             <option value="Caeleb">Caeleb Dressel Mens 100m </option>
             <option value="Emma">Emma Mckeon Womens 100m world rec </option>
@@ -42,8 +42,8 @@
             <option value="lizard">Basilisk lizards (running on water)</option>
 
         </select>
-
         <img src="/static/img/add.png"  onclick="createRacer(document.getElementById('default').value)"></img>
+        <img src="/static/img/sub.png"  onclick="removeElements()"></img>
     </div>
 
     <br>
@@ -54,7 +54,10 @@
             <img src="/static/img/MyWebsite.png" alt="My Website" style="height:auto; width:25%;">
         </a>
     </div>
-    
+    <div id ='heat' class="hContainer">
+        
+
+    </div>
     
    
 </body>
@@ -63,7 +66,7 @@
     var imageUrls = {
         "Zhanle": "{{ url_for('static', filename='img/man.png') }}",
         "Caeleb":"{{ url_for('static', filename='img/man.png') }}",
-        "Sarah": "{{ url_for('static', filename='img/woman.png') }}",
+        "Sarah Sjöström": "{{ url_for('static', filename='img/woman.png') }}",
         "Emma": "{{ url_for('static', filename='img/woman.png') }}",
         "Yellowfin": "{{ url_for('static', filename='img/Yellowfin.png') }}",
         "SwordFish": "{{ url_for('static', filename='img/SwordFish.png') }}",
