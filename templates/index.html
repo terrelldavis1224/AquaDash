@@ -31,50 +31,53 @@
 
         <select name="default" id="default">
             <option value="Sarah Sjöström">Sarah Sjöström Womens 100m 2024 Winner</option>
-            <option value="Zhanle">Zhanle Pan Mens 100m world rec</option>
-            <option value="Caeleb">Caeleb Dressel Mens 100m </option>
-            <option value="Emma">Emma Mckeon Womens 100m world rec </option>
+            <option value="Zhanle Pan">Zhanle Pan Mens 100m world rec</option>
+            <option value="Caeleb Dressel">Caeleb Dressel Mens 100m </option>
+            <option value="Emma Mckeon">Emma Mckeon Womens 100m world rec </option>
             <option value="stone">Stone ("if you wait long enough it might move")</option>
             <option value="Yellowfin">Yellowfin</option>
             <option value="SwordFish">SwordFish</option>
             <option value="turtle">turtle</option>
-            <option value="snake">Sidewinder Snake</option>
-            <option value="lizard">Basilisk lizards (running on water)</option>
+            <option value="Sidewinder Snake">Sidewinder Snake</option>
+            <option value="Basilisk lizard">Basilisk lizards (running on water)</option>
+            <option value="Sunflower Sea Star">Sunflower Sea Star</option>
+            <option value="U.S. Masters Average">U.S. Masters Average Swim Time</option>
 
         </select>
-        <img src="/static/img/add.png"  onclick="createRacer(document.getElementById('default').value)"></img>
-        <img src="/static/img/sub.png"  onclick="removeElements()"></img>
+        <img src="/static/img/add.png" style="height:auto; width:4%;" onclick="createRacer(document.getElementById('default').value)"></img>
+        <img src="/static/img/sub.png" style="height:auto; width:4%;"  onclick="removeElements()"></img>
     </div>
 
     <br>
     <br>
 
+
+    <div id ='heat' class="hContainer">
+        
+
+    </div>
     <div class="c">
         <a href="https://terrelldavis1224.github.io/" target="_blank">
             <img src="/static/img/MyWebsite.png" alt="My Website" style="height:auto; width:25%;">
         </a>
     </div>
-    <div id ='heat' class="hContainer">
-        
-
-    </div>
-    
    
 </body>
 
 <script>
     var imageUrls = {
-        "Zhanle": "{{ url_for('static', filename='img/man.png') }}",
-        "Caeleb":"{{ url_for('static', filename='img/man.png') }}",
+        "Zhanle Pan": "{{ url_for('static', filename='img/man.png') }}",
+        "Caeleb Dressel":"{{ url_for('static', filename='img/man.png') }}",
         "Sarah Sjöström": "{{ url_for('static', filename='img/woman.png') }}",
-        "Emma": "{{ url_for('static', filename='img/woman.png') }}",
+        "Emma Mckeon": "{{ url_for('static', filename='img/woman.png') }}",
         "Yellowfin": "{{ url_for('static', filename='img/Yellowfin.png') }}",
         "SwordFish": "{{ url_for('static', filename='img/SwordFish.png') }}",
         "stone": "{{ url_for('static', filename='img/stone.png') }}",      
         "turtle": "{{ url_for('static', filename='img/turtle.png') }}",
-        "snake": "{{ url_for('static',filename = 'img/snake.png')}}",
-        "lizard": "{{ url_for('static',filename = 'img/lizard.png')}}"
-
+        "Sidewinder Snake": "{{ url_for('static',filename = 'img/snake.png')}}",
+        "Basilisk lizard": "{{ url_for('static',filename = 'img/lizard.png')}}",
+        "Sunflower Sea Star": "{{ url_for('static',filename = 'img/starfish.png')}}",
+        "U.S. Masters Average": "{{ url_for('static',filename = 'img/man.png')}}"
     };
 </script>
 
