@@ -36,7 +36,7 @@ function startRace() {
 function calculateMovementPercentage(windowWidth) {
     if (windowWidth > 1200) { 
         return 95;
-    } else if (windowWidth < 768) {
+    } else if (windowWidth > 768) {
         return 90;
     } else { 
         return 85;
